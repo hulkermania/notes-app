@@ -22,6 +22,24 @@ export default class StorageStack extends sst.Stack {
       primaryIndex: { partitionKey: "userId", sortKey: "noteId"}
     });
     // S3Bucket 생성
-    this.bucket = new sst.Bucket(this, "Uploads")
+    this.bucket = new sst.Bucket(this, "Uploads", {
+      s3Bucket: {
+        // 클라이언트에서 S3 버킷으로 접근가능하도록 CORS 설정
+        cors: [
+          {
+            maxAge: 3000,
+            allowedOrigins: ["*"],
+            allowedHeaders: ["*"],
+            allowedMethods: [
+              HttpMethods.GET,
+              HttpMethods.POST,
+              HttpMethods.PUT,
+              HttpMethods.DELETE,
+              HttpMethods.HEAD,
+            ],
+          },
+        ],
+      },
+    });
   }
 }

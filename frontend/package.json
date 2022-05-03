@@ -10,10 +10,13 @@
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
+    "aws-amplify": "^4.3.20",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3"
   },
   "scripts": {
@@ -41,6 +44,9 @@
     ]
   },
   "devDependencies": {
-    "@serverless-stack/static-site-env": "^0.69.7"
+    "@serverless-stack/static-site-env": "^0.69.7",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^5.3.3",
+    "web-vitals": "^2.1.4"
   }
 }
